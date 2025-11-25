@@ -10,5 +10,13 @@ namespace Apetrei_Alexandru_Lab1.Controllers
             var student = new Student { Name = "Ana", Age = 21 };
             return View(student);
         }
+
+        public IActionResult TestViewBag()
+        {
+            ViewBag.Message = "Mesaj din Controller";
+            ViewData["Time"] = DateTime.Now;
+
+            return View();
+        }
     }
 }
